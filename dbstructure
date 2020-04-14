@@ -1,0 +1,30 @@
+Table 1 : users
+        id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(100) NOT NULL,
+        username VARCHAR(50) NOT NULL UNIQUE,        
+        password VARCHAR(255) NOT NULL,
+        rings INT NOT NULL,
+        doneauth INT NOT NULL
+
+Table 2 : movies
+        id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        moviename VARCHAR(255) NOT NULL,
+        hall VARCHAR(255) NOT NULL,        
+        seats INT NOT NULL
+
+Table 3 : tickets
+        id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        ticketid INT NOT NULL,
+        name VARCHAR(100) NOT NULL,
+        username VARCHAR(50) NOT NULL UNIQUE,
+        userid INT NOT NULL UNIQUE,
+        moviename VARCHAR(255) NOT NULL,        
+        seatnum INT NOT NULL
+
+Table 4 : hall
+        id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(100) NOT NULL,
+        username VARCHAR(50) NOT NULL UNIQUE,        
+        password VARCHAR(255) NOT NULL,
+        rings INT NOT NULL,
+        doneauth INT NOT NULL
